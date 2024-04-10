@@ -945,7 +945,7 @@ export abstract class ServiceRecognizerBase implements IDisposable {
     }
 
     private delay(delayMs: number): Promise<void> {
-        return new Promise((resolve: () => void): number => this.privSetTimeout(resolve, delayMs));
+        return new Promise((resolve: () => void): any => setTimeout(resolve, delayMs));
     }
 
     private writeBufferToConsole(buffer: ArrayBuffer): void {
